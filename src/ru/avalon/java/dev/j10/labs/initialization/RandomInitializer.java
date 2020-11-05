@@ -16,10 +16,12 @@ import ru.avalon.java.dev.j10.labs.Initializer;
  */
 public class RandomInitializer implements Initializer {
 
-    int diapozon;
+    int diapozonS, diapozonF, med;
     
-    public RandomInitializer(int diapozon){
-        this.diapozon=diapozon;
+    public RandomInitializer(int diapozonS, int diapozonF){
+        this.diapozonS=diapozonS;
+        this.diapozonF=diapozonF;
+        med=diapozonF-diapozonS;
     }
     /**
      * Выполняет инициализацию массива, значениями
@@ -33,8 +35,9 @@ public class RandomInitializer implements Initializer {
          */
         Random rnd = new Random();
         
+        
         for(int i=0; i<array.length; i++){
-            array[i]=rnd.nextInt(diapozon)-50;
+            array[i]=rnd.nextInt(med+1)+diapozonS;
         }
     }
 }

@@ -32,7 +32,7 @@ public class Application {
         /*
         Задание 3
         */
-        RandomInitializer rnd1 = new RandomInitializer(101); //это обеспечит выпадение 101 значени (50 полож, 50 отриц, 0 - 101 значение)
+        RandomInitializer rnd1 = new RandomInitializer(-50, 50); //В parameter list конструктора указываются диапазоны для случайного числа.
         rnd1.initialize(array);
         
         /*
