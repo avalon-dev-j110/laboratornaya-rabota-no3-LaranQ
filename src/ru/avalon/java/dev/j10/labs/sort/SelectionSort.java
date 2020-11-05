@@ -21,5 +21,16 @@ public class SelectionSort implements Sort {
         /*
          * TODO(Студент): Реализовать метод sort класса SelectionSort
          */
+        for (int i = 0; i < array.length-1; i++) {
+		int min = i;
+		for (int j = i + 1; j < array.length; j++) {
+		    if (array[j] < array[min]) {
+				min = j;
+			}
+		}
+		    int k = array[i]; // сохраняем для обмена значение текущего элемента
+		    array[i] = array[min]; // устанавливаем минимальное значение на проверяемый внешним циклом элемент массива
+		    array[min] = k; // меняем местами проверявшийся элемент массива с тем местом, где ранее был минимальный элемент
+	}
     }
 }
